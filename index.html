@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="./resources/ol.css">
@@ -14,6 +14,11 @@
         <style>
         html, body {
             background-color: #ffffff;
+	    margin: 0 !important;
+      	    padding: 0 !important;
+      	    width: 100% !important;
+      	    height: 100% !important;
+      	    overflow: hidden !important;	   
         }
         .ol-control > * {
             background-color: #f8f8f8!important;
@@ -37,8 +42,8 @@
 
         <style>
         #map {
-            width: 840px;
-            height: 670px;
+            width: 100vw !important;
+            height: 100vh !important;
         }
         </style>
         <title></title>
