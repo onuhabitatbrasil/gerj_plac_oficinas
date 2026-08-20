@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_escolas_7 = function(feature, resolution){
+var style_saude_7 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -70,19 +70,19 @@ var style_escolas_7 = function(feature, resolution){
 	}
     var style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 12.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(109,190,75,1.0)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(238,52,46,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
     }),new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [100, 100],
-                  scale: 0.13,
-                  anchor: [50.0, 50.0],
+                  imgSize: [15, 15],
+                  scale: 1.1333333333333333,
+                  anchor: [7.5, 7.5],
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
                   rotation: 0.0,
-                  src: "styles/school.svg"
+                  src: "styles/embedded.svg"
             }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,

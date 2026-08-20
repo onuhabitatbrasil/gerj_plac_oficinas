@@ -1,17 +1,17 @@
 var size = 0;
 var placement = 'point';
 
-var style_saude_6 = function(feature, resolution){
+var style_localidades_completo_9 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
     };
     
     var labelText = ""; 
-    var labelFont = "10px, sans-serif";
-    var labelFill = "#000000";
-    var bufferColor = "";
-    var bufferWidth = 0;
+    var labelFont = "14.3px \'Roboto Condensed\', sans-serif";
+    var labelFill = "#ffffff";
+    var bufferColor = "#00538b";
+    var bufferWidth = 3.0;
     var textAlign = 'left';
     var offsetX = 8;
     var offsetY = 3;
@@ -24,8 +24,8 @@ var style_saude_6 = function(feature, resolution){
     if (size == 1) { // If cluster has one feature
         var feature = clusteredFeatures[0];
         value = clusteredFeatures[0].get("");
-        if ("" !== null) {
-            labelText = String("");
+        if (feature.get("NM_LOCALIDADE") !== null) {
+            labelText = String(feature.get("NM_LOCALIDADE"));
         }
     } else { // If cluster has more than one feature
 		labelText = size.toString();
@@ -70,19 +70,19 @@ var style_saude_6 = function(feature, resolution){
 	}
     var style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 12.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(238,52,46,1.0)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(0,178,227,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
     }),new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [15, 15],
-                  scale: 1.1333333333333333,
-                  anchor: [7.5, 7.5],
+                  imgSize: [67, 100],
+                  scale: 0.16417910447761194,
+                  anchor: [33.5, 50.0],
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
                   rotation: 0.0,
-                  src: "styles/embedded.svg"
+                  src: "styles/location.svg"
             }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,

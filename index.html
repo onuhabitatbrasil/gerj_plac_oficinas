@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="./resources/ol.css">
@@ -14,11 +14,6 @@
         <style>
         html, body {
             background-color: #ffffff;
-	    margin: 0 !important;
-      	    padding: 0 !important;
-      	    width: 100% !important;
-      	    height: 100% !important;
-      	    overflow: hidden !important;	   
         }
         .ol-control > * {
             background-color: #f8f8f8!important;
@@ -41,9 +36,11 @@
         </style>
 
         <style>
-        #map {
-            width: 100vw !important;
-            height: 100vh !important;
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
         </style>
         <title></title>
@@ -61,10 +58,10 @@
         <script src="./resources/ol-layerswitcher.js"></script>
         <script src="resources/photon-geocoder-autocomplete.min.js"></script>
         <script src="resources/olms.js"></script>
-        <script src="layers/area_urb_1.js"></script><script src="layers/fcu_2.js"></script><script src="layers/areas_quilombolas_3.js"></script><script src="layers/bairros_4.js"></script><script src="layers/hidrografia_5.js"></script><script src="layers/saude_6.js"></script><script src="layers/escolas_7.js"></script><script src="layers/localidades_8.js"></script><script src="layers/municipios_9.js"></script>
-        <script src="styles/area_urb_1_style.js"></script><script src="styles/fcu_2_style.js"></script><script src="styles/areas_quilombolas_3_style.js"></script><script src="styles/bairros_4_style.js"></script><script src="styles/hidrografia_5_style.js"></script><script src="styles/saude_6_style.js"></script><script src="styles/escolas_7_style.js"></script><script src="styles/localidades_8_style.js"></script><script src="styles/municipios_9_style.js"></script>
+        <script src="layers/area_urb_2.js"></script><script src="layers/fcu_3.js"></script><script src="layers/areas_quilombolas_4.js"></script><script src="layers/bairros_5.js"></script><script src="layers/hidrografia_6.js"></script><script src="layers/saude_7.js"></script><script src="layers/escolas_8.js"></script><script src="layers/localidades_completo_9.js"></script><script src="layers/municipios_10.js"></script>
+        <script src="styles/area_urb_2_style.js"></script><script src="styles/fcu_3_style.js"></script><script src="styles/areas_quilombolas_4_style.js"></script><script src="styles/bairros_5_style.js"></script><script src="styles/hidrografia_6_style.js"></script><script src="styles/saude_7_style.js"></script><script src="styles/escolas_8_style.js"></script><script src="styles/localidades_completo_9_style.js"></script><script src="styles/municipios_10_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
-        <script src="./resources/qgis2web.js"></script>
+        <script src="./resources/qgis2web.js"></script>        
     </body>
 </html>

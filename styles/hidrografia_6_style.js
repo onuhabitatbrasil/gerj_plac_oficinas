@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_municipios_9 = function(feature, resolution){
+var style_hidrografia_6 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,9 +9,9 @@ var style_municipios_9 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "10.4px \'Roboto Condensed\', sans-serif";
+    var labelFont = "9.1px \'Roboto Condensed\', sans-serif";
     var labelFill = "#ffffff";
-    var bufferColor = "#00538b";
+    var bufferColor = "#00afaa";
     var bufferWidth = 3.0;
     var textAlign = 'left';
     var offsetX = 8;
@@ -19,11 +19,11 @@ var style_municipios_9 = function(feature, resolution){
     var overflow = false;
     var repeat = 0;
     var placement = 'point';
-    if ("" !== null) {
-        labelText = String("");
+    if (feature.get("nome") !== null) {
+        labelText = String(feature.get("nome"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,198,41,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.988}),
+        fill: new ol.style.Fill({color: 'rgba(0,175,170,1.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)

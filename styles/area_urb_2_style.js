@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_hidrografia_5 = function(feature, resolution){
+var style_area_urb_2 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,21 +9,21 @@ var style_hidrografia_5 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "9.1px \'Roboto Condensed\', sans-serif";
-    var labelFill = "#ffffff";
-    var bufferColor = "#00afaa";
-    var bufferWidth = 3.0;
+    var labelFont = "10px, sans-serif";
+    var labelFill = "#000000";
+    var bufferColor = "";
+    var bufferWidth = 0;
     var textAlign = 'left';
     var offsetX = 8;
     var offsetY = 3;
     var overflow = false;
     var repeat = 0;
     var placement = 'point';
-    if (feature.get("nome") !== null) {
-        labelText = String(feature.get("nome"));
+    if ("" !== null) {
+        labelText = String("");
     }
     var style = [ new ol.style.Style({
-        fill: new ol.style.Fill({color: 'rgba(0,175,170,1.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.748}),fill: new ol.style.Fill({color: 'rgba(255,198,41,0.30196078431372547)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)

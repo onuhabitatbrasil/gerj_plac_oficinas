@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_bairros_4 = function(feature, resolution){
+var style_bairros_5 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,10 +9,10 @@ var style_bairros_4 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("''");
-    var labelFont = "9.1px \'Roboto Condensed\', sans-serif";
-    var labelFill = "#555555";
+    var labelFont = "13.0px \'Roboto Condensed\', sans-serif";
+    var labelFill = "#000000";
     var bufferColor = "#fafafa";
-    var bufferWidth = 0.9000000000000005;
+    var bufferWidth = 1.5;
     var textAlign = 'left';
     var offsetX = 8;
     var offsetY = 3;
